@@ -19,6 +19,15 @@
 #ifndef DOSBOX_MEM_H
 #define DOSBOX_MEM_H
 
+#ifdef _MSC_VER
+#define le16toh(x) (x)
+#define le32toh(x) (x)
+#define le64toh(x) (x)
+#define htole16(x) (x)
+#define htole32(x) (x)
+#define htole64(x) (x)
+#endif
+
 #ifndef DOSBOX_DOSBOX_H
 #include "dosbox.h"
 #endif
